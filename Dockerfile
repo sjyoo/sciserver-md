@@ -14,8 +14,6 @@ WORKDIR /home/idies
 RUN 	conda init bash && \
 	conda install -c conda-forge mamba cmake -n base -y && \
 	mamba create -n md python=3.10 -c conda-forge -y && \
-	echo "source `which conda`" >> ~/.bashrc && \
-	echo "source `which mamba`" >> ~/.bashrc && \
 	echo "conda activate md" >> ~/.bashrc
 
 RUN wget https://ftp.gromacs.org/gromacs/gromacs-2024.2.tar.gz && \
